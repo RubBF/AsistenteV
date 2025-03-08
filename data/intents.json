@@ -1,0 +1,158 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola",
+        "Hey",
+        "Buenos días",
+        "Buenas tardes",
+        "¿Hay alguien ahí?"
+      ],
+      "responses": [
+        "¡Hola! ¿En qué puedo ayudarte?",
+        "Hola, ¿cómo puedo asistirte hoy?",
+        "¡Saludos! Dime en qué te ayudo."
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Adiós",
+        "Hasta luego",
+        "Nos vemos",
+        "Chao"
+      ],
+      "responses": [
+        "¡Hasta pronto! Si necesitas más ayuda, aquí estaré.",
+        "Nos vemos, ¡que tengas un buen día!",
+        "¡Cuídate! Vuelve cuando necesites más información."
+      ]
+    },
+    {
+      "tag": "documentacion_imponente",
+      "patterns": [
+        "Documentos necesarios para ser imponente",
+        "¿Qué papeles debo presentar?",
+        "¿Qué necesito para ingresar?"
+      ],
+      "responses": [
+        "Debes presentar:\n\n- Cédula de identidad vigente (ambos lados).\n- Última liquidación de sueldo.\n- Formulario de ingreso firmado.\n- Declaración PEP (si corresponde).\n\nSi tu convenio lo requiere, también se pide el V°B° de un habilitado."
+      ]
+    },
+    {
+      "tag": "incrementar_ahorros",
+      "patterns": [
+        "¿Cómo aumento mi ahorro mensual?",
+        "Quiero ahorrar más",
+        "¿Puedo incrementar mi ahorro?",
+        "Subir mi porcentaje de ahorro"
+      ],
+      "responses": [
+        "Incrementar tus ahorros y beneficios es muy fácil:<br><br>1) Envía un correo a <strong>remesas@caep.cl</strong> indicando el monto adicional que deseas ahorrar.<br>2) Adjunta tu última liquidación de sueldo (para validar descuentos por planilla, u otras opciones).<br>3) Espera la confirmación (máx 48 horas).<br><br>Puedes retirar tus ahorros cuando lo necesites, parcial o totalmente, siempre que no tengas deudas pendientes. Recuerda: si retiras todo tu saldo, pierdes la calidad de imponente."
+      ]
+    },
+    {
+      "tag": "info_creditos",
+      "patterns": [
+        "Quiero saber sobre los créditos",
+        "Información de préstamos",
+        "¿Qué créditos ofrecen?",
+        "Primer préstamo",
+        "Crédito para jubilados",
+        "Crédito para imponentes con antigüedad"
+      ],
+      "responses": [
+        "Tenemos varios créditos con descuentos por planilla:\n\n<strong>1) Primer Préstamo al ingresar como imponente</strong><br>- Tasa de interés: 1.9% (12 a 18 cuotas fijas).<br>- Monto hasta $2,5 millones, se descuenta 10% del monto aprobado al depositarlo en tu cuenta de ahorros.<br><br><strong>2) Imponente Jubilado (CANAEMPU)</strong><br>- Tasa de interés: 1.7% (12 a 24 cuotas fijas).<br>- Monto y plazos sujetos a evaluación.<br><br><strong>3) Imponente con más de 1 año de antigüedad, sin préstamo o renovación</strong><br>- Tasa de interés: 2.4% (12 a 48 cuotas fijas).<br>- Hasta 8 veces tus fondos de ahorro (tope de UF 200).<br><br><em>*Montos y plazos se confirman al ingresar la solicitud.<br>Los Seguros de Desempleo y Desgravamen asociados a un préstamo no incrementan el valor de la cuota, pues son financiados por la Institución.</em>"
+      ]
+    },
+    {
+      "tag": "info_seguros_cesantia",
+      "patterns": [
+        "Seguro de cesantía",
+        "Me quedé sin trabajo",
+        "Cobertura para desempleo"
+      ],
+      "responses": [
+        "<strong>Seguro de Cesantía</strong><br>• Cubre hasta 6 cuotas de tu crédito vigente si quedas sin empleo (límite 30 UF por cuota, 180 UF total).<br>• Edad máxima de ingreso: 64 años 364 días, antigüedad laboral >= 180 días.<br><br><strong>Documentos:</strong><br>• Finiquito o carta de despido.<br>• Certificado de cotizaciones para cobros posteriores.<br>• Desarrollo de deuda del crédito."
+      ]
+    },
+    {
+      "tag": "info_seguros_deceso_familiar",
+      "patterns": [
+        "Seguro deceso familiar",
+        "Gastos fúnebres familiares",
+        "Seguro para fallecimiento de familia"
+      ],
+      "responses": [
+        "<strong>Seguro Deceso Familiar Directo</strong><br>• Válido para imponentes y asegurados menores de 70 años.<br>• Reembolsa hasta 25 UF al año por gastos de servicios fúnebres.<br>• Cubre cónyuge/conviviente civil, hijos, padres y parejas con hijos en común.<br><br><strong>Documentación:</strong><br>• Certificado de defunción con causa de muerte.<br>• Facturas o boletas que acrediten gastos fúnebres.<br>• Certificado de matrimonio o nacimiento para acreditar parentesco."
+      ]
+    },
+    {
+      "tag": "info_seguros_desgravamen_itp",
+      "patterns": [
+        "Seguro desgravamen + ITP",
+        "Cobertura de deuda al fallecer",
+        "¿Qué pasa con mi préstamo si fallezco?"
+      ],
+      "responses": [
+        "<strong>Seguro de Desgravamen + ITP 2/3</strong><br>• Al fallecer el imponente, este seguro paga la deuda que mantiene en la CAEP (saldo insoluto).<br>• Edad máxima de ingreso: 75 años, permanencia hasta 80.<br><br><strong>Documentación:</strong><br>• Certificado de defunción con causa de muerte.<br>• Desarrollo de deuda del crédito.<br>• Si fue por accidente, parte policial, autopsia, etc."
+      ]
+    },
+    {
+      "tag": "info_seguros_hogar_incendio",
+      "patterns": [
+        "Seguro hogar contra incendio",
+        "Casa dañada por incendio",
+        "Protección contra incendios en mi vivienda"
+      ],
+      "responses": [
+        "<strong>Seguro de Hogar Contra Incendio</strong><br>• Cubre casa principal contra incendio, hasta 10 veces el valor de tus ahorros (máx 200 UF).<br>• Antigüedad máxima de la vivienda: 50 años, uso permanente, en zona urbana.<br>• Excluye viviendas en islas, a >100m de ríos, etc.<br><br><strong>Documentación en caso de siniestro:</strong><br>• Informe de bomberos, denuncia a Carabineros, certificado de dominio, etc.<br>• Tienes 60 días máximo para denunciar."
+      ]
+    },
+    {
+      "tag": "info_seguros_muerte_accidental",
+      "patterns": [
+        "Seguro de muerte accidental",
+        "¿Qué cubre la muerte accidental?",
+        "Información seguro muerte accidental"
+      ],
+      "responses": [
+        "<strong>Seguro Muerte Accidental</strong><br>• Válido para menores de 70 años.<br>• Cubre hasta 60 UF a la fecha del siniestro, pagadero a herederos legales.<br><br><strong>Requisitos:</strong><br>• Edad mínima 18, máxima de ingreso 69, permanencia hasta 70.<br><br><strong>Documentos en caso de siniestro:</strong><br>• Certificado de Defunción original con causa de muerte, parte policial, protocolo autopsia, etc.<br>• La Compañía puede requerir antecedentes adicionales."
+      ]
+    },
+    {
+      "tag": "info_seguros_perdida_total_automotriz",
+      "patterns": [
+        "Seguro pérdida total automotriz",
+        "Choque con pérdida total",
+        "Cobertura para mi auto"
+      ],
+      "responses": [
+        "<strong>Seguro de Pérdida Total Automotriz</strong><br>• Cubre choque con pérdida total; monto asegurado = Valor Comercial del vehículo (tope 100% de tus ahorros).<br>• Antigüedad del vehículo < 15 años, uso particular, y el asegurado ser mayor de 18.<br>• Se realiza autoinspección por App.<br><br><strong>Documentación siniestro:</strong><br>• Licencia de conducir, padrón, permiso de circulación, parte policial, etc.<br>• Plazo máximo 10 días para denunciar el siniestro."
+      ]
+    },
+    {
+      "tag": "requisitos_imponente",
+      "patterns": [
+        "¿Cuáles son los requisitos para ser imponente?",
+        "Quién puede ser imponente",
+        "Quiero saber los requisitos de imponente"
+      ],
+      "responses": [
+        "Para ser imponente en CAEP debes:\n\n- Ser funcionario público o empleado con contrato permanente (también jubilados, independientes, etc.).\n- Tener renta imponible mayor o igual al sueldo mínimo legal.\n- Tener entre 18 y 70 años.\n- Aportar al menos el 1% de tu sueldo como ahorro."
+      ]
+    },
+    {
+      "tag": "tutorial_ingreso_imponente",
+      "patterns": [
+        "¿Cómo ingreso un imponente?",
+        "Pasos para ingresar un imponente",
+        "Necesito un tutorial para ingresar un imponente"
+      ],
+      "responses": [
+        "Aquí tienes los pasos para crear un imponente en la aplicación:<br><br>1. Accede al módulo <strong>Incorporación de Imponentes</strong>.<br>2. Completa los campos obligatorios (RUT, nombre, etc.).<br>3. Adjunta la documentación requerida (cédula, liquidación de sueldo, etc.).<br><br>Visualiza el formulario:<br><img src=\"/static/images/crear_imponente.png\" width=\"300\" alt=\"Crear Imponente\" /><br>Mira este video corto:<br><video width=\"400\" controls><source src=\"/static/videos/corto_ingreso.mp4\" type=\"video/mp4\" /></video>"
+      ]
+    }
+  ]
+}

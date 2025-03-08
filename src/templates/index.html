@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Asistente Virtual CAEP</title>
+  <!-- Fuente Montserrat de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1C2E4A; /* Azul oscuro */
+      font-family: 'Montserrat', sans-serif;
+      color: #F2F2F2; /* Texto claro */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 2em;
+    }
+    #chat-container {
+      background-color: #2B3E5F; /* Un tono azul un poco más claro */
+      width: 70%;
+      max-width: 800px;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+    }
+    #conversation {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      border: 1px solid #405a7a;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #1C2B47;
+    }
+    .message {
+      margin: 5px 0;
+      line-height: 1.4;
+    }
+    .message strong {
+      font-weight: 600;
+    }
+    #input-container {
+      display: flex;
+    }
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #405a7a;
+      border-radius: 5px;
+      font-size: 1em;
+      color: #333;
+    }
+    #send-btn {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #4A6FA5;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #send-btn:hover {
+      background-color: #5D82BD;
+    }
+    .message-user::before {
+      content: "💬 ";
+    }
+    .message-bot::before {
+      content: "🤖 ";
+    }
+  </style>
+</head>
+<body>
+  <h1>Asistente Virtual CAEP</h1>
+  <div id="chat-container">
+    <!-- Área para mostrar mensajes -->
+    <div id="conversation"></div>
+
+    <!-- Input del usuario + botón -->
+    <div id="input-container">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
+      <button id="send-btn">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    const sendBtn = document.getElementById("send-btn");
+    const userInput = document.getElementById("user-input");
+    const conversation = document.getElementById("conversation");
+
+    // Manejar clic en "Enviar"
+    sendBtn.addEventListener("click", sendMessage);
+
+    // Permitir envío con tecla Enter
+    userInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault(); // Para evitar saltos de línea en el input
+        sendMessage();
+      }
+    });
+
+    function sendMessage() {
+      const message = userInput.value.trim();
+      if (message.length > 0) {
+        // Mostrar mensaje del usuario
+        addMessage("Tú", message, "message-user");
+
+        // Petición al servidor Flask
+        fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message })
+        })
+        .then(response => response.json())
+        .then(data => {
+          // data.reply es la respuesta del chatbot
+          addMessage("Chatbot", data.reply, "message-bot");
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          addMessage("Chatbot", "Lo siento, ocurrió un error en el servidor.", "message-bot");
+        });
+
+        userInput.value = "";
+      }
+    }
+
+    function addMessage(sender, text, cssClass) {
+      const msgDiv = document.createElement("div");
+      msgDiv.className = `message ${cssClass}`;
+      msgDiv.innerHTML = `<strong>${sender}:</strong> ${text}`;
+      conversation.appendChild(msgDiv);
+      conversation.scrollTop = conversation.scrollHeight;
+    }
+  </script>
+</body>
+</html>

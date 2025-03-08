@@ -1,0 +1,219 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola",
+        "Hey",
+        "Buenas",
+        "Buenos días",
+        "Buenas tardes",
+        "¿Hay alguien?"
+      ],
+      "responses": [
+        "¡Hola! ¿En qué puedo ayudarte?",
+        "Hola, ¿en qué te puedo apoyar hoy?",
+        "¡Saludos! ¿En qué te ayudo?"
+      ]
+    },
+    {
+      "tag": "ayuda_inicial",
+      "patterns": [
+        "¿En qué puedes ayudarme?",
+        "¿Cómo me puedes ayudar?",
+        "Necesito ayuda",
+        "¿Qué hace este asistente?",
+        "¿Qué servicios ofreces?"
+      ],
+      "responses": [
+        "Puedo ayudarte a resolver dudas sobre la CAEP: cómo incorporar imponentes, requisitos, retiros de ahorro, estados de la solicitud, administración de convenios con instituciones, y más.",
+        "Estoy aquí para responder preguntas sobre el proceso de incorporación de imponentes, retiros parciales, gestión de planes de ahorro, convenios, etc."
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Adiós",
+        "Hasta luego",
+        "Nos vemos",
+        "Me voy",
+        "Chao"
+      ],
+      "responses": [
+        "¡Hasta pronto! Si necesitas más información, aquí estaré.",
+        "Gracias por visitar el asistente de CAEP. ¡Hasta luego!",
+        "¡Cuídate! Vuelve cuando tengas más dudas."
+      ]
+    },
+    {
+      "tag": "requisitos_imponente",
+      "patterns": [
+        "¿Cuáles son los requisitos para ser imponente?",
+        "¿Quién puede ser imponente?",
+        "Quiero saber si califico como imponente",
+        "Requisitos de imponente",
+        "¿Puedo ser imponente si soy funcionario público?"
+      ],
+      "responses": [
+        "Para ser imponente en la CAEP necesitas cumplir: ser funcionario público (o jubilado, independiente, empleado de la Corporación, etc.), tener una renta imponible >= al sueldo mínimo legal, tener entre 18 y 70 años, y ahorrar un mínimo del 1% de tus haberes.",
+        "Los requisitos básicos incluyen: ser empleado público o trabajador con sueldo fijo, tener antigüedad según tu tipo de contrato (si aplica) y no superar los 70 años de edad."
+      ]
+    },
+    {
+      "tag": "documentacion_imponente",
+      "patterns": [
+        "¿Qué documentos debo presentar para incorporarme?",
+        "Documentos necesarios para ser imponente",
+        "¿Qué papeles necesito para ingresar a CAEP?",
+        "Requisitos de papeles para imponente"
+      ],
+      "responses": [
+        "Debes presentar la cédula de identidad vigente (ambos lados), la última liquidación de sueldo y el formulario de incorporación con el V°B° del habilitado (si corresponde). También se requiere la solicitud de seguros y la declaración PEP en caso de ser necesario.",
+        "Se piden: Formulario de ingreso firmado, cédula de identidad por ambos lados, última liquidación de sueldo y, según el convenio, la aprobación del habilitado."
+      ]
+    },
+    {
+      "tag": "estados_imponente",
+      "patterns": [
+        "¿Cuáles son los estados de un imponente?",
+        "Quiero saber los estados posibles de un imponente",
+        "¿Qué significa estado vigente o postulado?",
+        "Estados de imponentes en CAEP"
+      ],
+      "responses": [
+        "Los estados habituales son: Postulado (en espera de aprobación), Rechazado, Vigente (imponente activo), Renunciado, Expulsado, Suspendido y Fallecido. Algunas veces también aparece Inmovilizado si el imponente lleva 3 meses sin movimientos.",
+        "Tenemos: Ingresado, Postulado (en evaluación), Rechazado, Vigente (activo), Renunciado, Expulsado, Suspendido y Fallecido."
+      ]
+    },
+    {
+      "tag": "maximo_giros",
+      "patterns": [
+        "¿Cuántos giros parciales puedo hacer?",
+        "¿Existe un límite de giros parciales al año?",
+        "Giros parciales anuales",
+        "¿Cuál es el máximo de retiros al año?"
+      ],
+      "responses": [
+        "Puedes hacer como máximo 4 giros parciales por año calendario. Se cuenta desde el 1 de enero hasta el 31 de diciembre.",
+        "El sistema permite hasta 4 giros parciales anuales. Si necesitas más, se podrían gestionar como un giro excepcional con aprobación especial."
+      ]
+    },
+    {
+      "tag": "retiro_parcial",
+      "patterns": [
+        "¿Cómo hago un retiro parcial?",
+        "Quiero retirar parte de mis ahorros",
+        "¿Puedo sacar algo de mis ahorros sin renunciar?",
+        "Proceso de retiro parcial de ahorro"
+      ],
+      "responses": [
+        "Para un retiro parcial, debes tener un saldo mínimo y no superar 4 giros al año. El mínimo se calcula dejando 1 UTM o el 10% del saldo disponible, lo que sea mayor. Además, presentas tu cédula de identidad y llenas la solicitud. Se revisa si no tienes deudas directas vigentes (o con excepciones aprobadas).",
+        "Para retirar parcialmente, revisa que cumplas el saldo mínimo y el límite de 4 giros anuales. Luego, llenas la solicitud, adjuntas tu documento de identidad y esperas la aprobación de Operaciones."
+      ]
+    },
+    {
+      "tag": "retiro_total",
+      "patterns": [
+        "Quiero retirar todos mis ahorros",
+        "¿Cómo renuncio y retiro todo?",
+        "Solicitud de retiro total",
+        "¿Puedo sacar mi ahorro por completo?"
+      ],
+      "responses": [
+        "Para un retiro total (Renuncia), si tienes crédito vigente, primero se evalúa si tus ahorros cubren la deuda. De lo contrario, no puedes renunciar hasta saldar el préstamo. Presentas tu solicitud de renuncia, aportas documentos (cédula de identidad, liquidación de sueldo si corresponde) y luego Operaciones revisa. Si se aprueba, se liberan tus fondos.",
+        "Debes hacer la solicitud de renuncia: con ello inicias el “retiro total”. Si no tienes préstamos vigentes o cubres la deuda con tus ahorros, el estado pasa a ‘En trámite de renuncia’ y luego se liberan los fondos tras la aprobación."
+      ]
+    },
+    {
+      "tag": "fallecimiento_proceso",
+      "patterns": [
+        "¿Qué pasa si el imponente fallece?",
+        "Trámite de fallecimiento en CAEP",
+        "Retiro total por defunción",
+        "Proceso para retirar fondos por fallecimiento"
+      ],
+      "responses": [
+        "Se debe ingresar la solicitud de defunción, adjuntar certificado de defunción y otros documentos según el caso (posesión efectiva si corresponde). Luego Operaciones confirma y tesorería libera los fondos a los herederos, tras el proceso legal.",
+        "La familia notifica el fallecimiento, presentando el certificado de defunción. Se da de baja el estado del imponente, y si procede, se liberan los ahorros a los herederos (se requiere posesión efectiva si supera cierto monto)."
+      ]
+    },
+    {
+      "tag": "suspension_expulsion",
+      "patterns": [
+        "¿Qué es un imponente suspendido?",
+        "Suspensión de imponente",
+        "¿Cuándo se expulsa a un imponente?",
+        "¿Por qué dejaría de ser imponente activo?"
+      ],
+      "responses": [
+        "El imponente suspendido es aquel que deja de tener movimientos en su cuenta de ahorro por un periodo prolongado o incumple ciertas condiciones temporales. Durante la suspensión, no puede solicitar préstamos ni algunos beneficios.",
+        "La expulsión ocurre cuando el imponente incumple normas o estatutos de forma grave. La suspensión a menudo es por falta de pago o inactividad, mientras que la expulsión es una decisión disciplinaria más severa."
+      ]
+    },
+    {
+      "tag": "cambios_datos_personales",
+      "patterns": [
+        "¿Cómo actualizo mis datos personales?",
+        "Necesito cambiar mi dirección o mi nombre",
+        "¿Puedo modificar mis antecedentes financieros?",
+        "Modificar mis datos en CAEP"
+      ],
+      "responses": [
+        "Puedes hacer cambio de datos personales (dirección, teléfono, mail) desde la opción 'Cambio de Antecedentes Personales'. Es obligatorio cumplir las mismas reglas de incorporación, y sólo usuarios autorizados pueden editar.",
+        "Para cambiar datos personales o financieros, un ejecutivo (Agencia, Terreno, Operaciones) puede ingresar al sistema y modificar la información. Se exigen los mismos campos obligatorios que al darte de alta."
+      ]
+    },
+    {
+      "tag": "cambio_forma_pago",
+      "patterns": [
+        "¿Cómo cambio la forma de pago a PAC?",
+        "Quiero cambiar mi descuento por planilla",
+        "Modificar la forma de pago del ahorro",
+        "Pasar de PAC a planilla"
+      ],
+      "responses": [
+        "Para cambiar tu forma de pago (PAC o Descuento por Planilla), se ingresa la opción 'Cambio de Forma de Pago'. Deberás registrar tu cuenta bancaria o institución habilitada, según corresponda, y justificar el motivo.",
+        "Puedes hacerlo en la sección correspondiente del sistema (Cambio de Forma de Pago). Se requiere que tu cuenta bancaria esté validada si eliges PAC o que tu institución tenga convenio si eliges descuento por planilla."
+      ]
+    },
+    {
+      "tag": "gestion_instituciones",
+      "patterns": [
+        "¿Cómo funcionan los convenios con instituciones?",
+        "Quiero saber la gestión de reparticiones",
+        "¿Qué hace el habilitado y el encargado de descuento?",
+        "Planillas de envío y recepción de descuentos"
+      ],
+      "responses": [
+        "La CAEP gestiona convenios o acuerdos con instituciones públicas. Un habilitado autoriza descuentos de ahorro y préstamos, y un encargado de descuento recibe la planilla de envío y envía la planilla de recepción con los pagos. Cada convenio define el porcentaje máximo de descuento y la forma de operar.",
+        "Existen convenios formales que permiten hacer descuento por planilla. Cada institución tiene uno o más habilitados y un encargado de descuentos. Se generan planillas de envío (para cobrar préstamos, ahorro) y luego la institución retorna la planilla de recepción con el abono correspondiente."
+      ]
+    },
+    {
+      "tag": "reportes_consultas",
+      "patterns": [
+        "Quiero saber si puedo ver reportes",
+        "¿Qué reportes hay disponibles?",
+        "Consultas de saldos, nóminas, listas de imponentes",
+        "Deseo ver informes de giros"
+      ],
+      "responses": [
+        "Existen reportes de Saldos de Ahorro, Giros Parciales, Nuevos Ingresos, Retirados, Nómina de Admisiones y Renuncias, y otros para la gerencia (ej. Sabana completa de ingresos). Se pueden filtrar por fechas y estados.",
+        "CAEP ofrece reportes de gestión, como Nuevos Ingresos, Giros de Ahorro, Lista de Postulaciones, Saldo por agencia, etc. Dependiendo del rol, puedes descargar en Excel o PDF."
+      ]
+    },
+    {
+      "tag": "pregunta_no_entendida",
+      "patterns": [
+        "Esto no tiene nada que ver",
+        "No se si me entiendes",
+        "¿...?",
+        "???"
+      ],
+      "responses": [
+        "Lo siento, no entendí tu pregunta. ¿Podrías reformularla?",
+        "Disculpa, no tengo una respuesta para eso. Intenta preguntar de otra forma."
+      ]
+    }
+  ]
+}

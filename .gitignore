@@ -1,0 +1,78 @@
+# Build y directorios temporales
+build/
+out/
+tmp/
+temp/
+dist/
+bin/
+obj/
+CMakeFiles/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.pdb
+*.exp
+*.lib
+
+# Archivos generados
+*.h.inc
+*.cpp.inc
+*.gen.*
+*_generated.*
+generated/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.Python
+env/
+venv/
+pip-wheel-metadata/
+
+# Configuración de herramientas
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.suo
+*.cache
+*.log
+*.swp
+*.bak
+*.tmp
+
+# IDEs y editores
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Documentación
+docs/_build/
+doc/html/
+doc/latex/
+
+# Dependencias externas
+third_party/
+external/
+node_modules/
+vendor/
+
+# Archivos específicos del sistema
+compile_commands.json
+CMakeCache.txt
+CTestTestfile.cmake
+cmake_install.cmake
+Makefile
